@@ -37,10 +37,10 @@
         # ranges our x values together #    
         xfit = np.arange(0.1,400,0.1)
         # equation of a straight line #
-        yfit = m*xfit + c
+        yfit = np.exp(c)*xfit**m
         plt.plot(xfit, yfit, label = 'Best Fit')
         #plt.legend(x, y, eqn)
-        eqn = 'y = ' + str(m1) + 'x + ' + str(c1)    
+        eqn = 'y = ' + (str(xfit**m)) + 'x + ' + (str(np.exp(c)))   
         plt.xlabel('Area (Km$^2$)')
         plt.ylabel('River Length (km)') 
         plt.xscale('log')
